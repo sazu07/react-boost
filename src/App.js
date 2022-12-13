@@ -14,7 +14,7 @@ function App() {
       <Header setFood={setFood}></Header>
       <Routes>
         <Route path='/' element={<Restaurant food={food}/>}></Route>
-        <Route path='/meals' element={<Meals></Meals>}></Route>
+        <Route path='/:id' element={<Meals></Meals>}></Route>
       </Routes>
     </div>
   );

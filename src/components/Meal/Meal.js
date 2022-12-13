@@ -2,8 +2,9 @@ import React from 'react';
 import "./Meal.css"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
-const Meal = ({meal, mealsDetails}) => {
+const Meal = ({meal}) => {
  
 
    const { strMeal, strMealThumb, strInstructions, idMeal}=meal
@@ -16,7 +17,7 @@ const Meal = ({meal, mealsDetails}) => {
                 <Card.Text>
                      { strInstructions.slice(0, 200)}
                 </Card.Text>
-                <Button  onClick={()=>mealsDetails(idMeal)} >Go somewhere</Button>
+                <Link to={`/${idMeal}`}  >Go somewhere</Link>
                 </Card.Body>
                 </Card>
             </div>
