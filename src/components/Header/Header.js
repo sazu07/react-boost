@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
 
 const Header = ({setFood}) => {
@@ -19,8 +20,8 @@ const Header = ({setFood}) => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/meals">Meals</Nav.Link>
+            <Link className="nav-link" to="/">Home</Link>
+            <Link  className="nav-link" to="/meals">Meals</Link>
             <Form className="d-flex">
             <input type="text" onChange={(e)=>setFood(e.target.value)}/>
             <Button variant="outline-success">Search</Button>
